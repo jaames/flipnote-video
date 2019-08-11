@@ -9,9 +9,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "flipnote.js": "^3.1.1",
+    "flipnote.js": "^3.1.2",
     "fluent-ffmpeg": "^2.1.2",
-    "streamifier": "^0.1.1",
     "tmp": "^0.1.0"
   }
 }
