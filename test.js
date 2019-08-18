@@ -17,17 +17,19 @@ async function convert(inpath, outpath) {
   // returns a node-fluent-ffmpeg command object
   // https://github.com/fluent-ffmpeg/node-fluent-ffmpeg
   const converter = new FlipnoteConverter(flipnote);
-  converter.on('end', () => {
-    console.log('Video saved!');
-    const hrend = process.hrtime(hrstart)
-    console.info('Execution time: %ds %dms', hrend[0], hrend[1] / 1000000)
-  })
+
   converter.outputOptions([
     '-c:v libx264',
     '-pix_fmt yuv420p',
   ]);
-  converter.output(outpath);
+  converter.output('out.mp4');
   converter.run();
+
+  converter.on('end', () => {
+    console.log('Video saved!');
+    const hrend = process.hrtime(hrstart)
+    console.info('Execution time: %ds %dms', hrend[0], hrend[1] / 1000000)
+  });
 
 }
 

@@ -1,6 +1,9 @@
 *.ppm
 *.kwz
 *.mp4
+*.lst
+*.pls
+*.zip
 
 # Logs
 logs
