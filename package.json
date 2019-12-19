@@ -1,8 +1,13 @@
 {
   "name": "flipnote-video",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "cli.js",
+    "lib/*"
+  ],
   "bin": {
     "@jaames/flipnote-video": "./cli.js",
     "flipnote-video": "./cli.js"
@@ -16,7 +21,9 @@
     "cli-progress": "3.0.0",
     "flipnote.js": "^3.1.2",
     "fluent-ffmpeg": "2.1.2",
+    "glob": "^7.1.4",
     "meow": "5.0.0",
+    "string-format": "^2.0.0",
     "tmp": "0.1.0",
     "yargs": "13.3.0"
   }
